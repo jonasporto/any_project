@@ -1,0 +1,12 @@
+<div class="link-info-container">
+  <ul class="link-urls">
+    <li class="long-url">Long url <%= link_to @link.long_url, @link.long_url, data: { turbolinks: false } %></li>
+    <li class="short-url">Short url <%= link_to @link.short_url, @link.short_url, data: { turbolinks: false } %></li>
+    <li><%= link_to 'Back to home page', root_path %></li>
+  </ul>
+  <ul class="counters">
+    <li class="counter-panel">Clicks<span class="all-visitors"><%= @link.visitors.count %> </span></li>
+    <li class="counter-panel">Sessions<span class="all-sessions"><%= @link.visitors.distinct.count(:session_id) %> </span></li>
+    <li class="counter-panel">Unique Visitors<span class="unique-visitors"><%= @link.visitors.distinct.count(:ip_address) %> </span></li>
+  </ul>
+</div>

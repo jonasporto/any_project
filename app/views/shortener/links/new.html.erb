@@ -1,0 +1,11 @@
+<%= form_for @link, html: { class: 'centered-link-form' } do |f| %>
+  <div class="input-item">
+    <%= f.text_field :long_url, class: 'long-url-input', placeholder: 'Enter a long URL (e.g. http://example.com/look-at-this)' %>
+  </div>
+  <%= f.submit('Shorten') %>
+<% end %>
+
+<% if @link.errors.present? %>
+  <%= render '/shared/model_errors', model: @link %>
+  <p class="errors-info">Please, ensure you have added valid protocols e.g. http://, https://, mailto://, or others</p>
+<% end %>

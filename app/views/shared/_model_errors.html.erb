@@ -1,0 +1,9 @@
+<% if model.errors.full_messages.any? %>
+  <div class="form-errors">
+    <% model.errors.full_messages.each do |error_message| %>
+      <% if model.errors.full_messages.first == error_message %>
+        <%= error_message %> <br />
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

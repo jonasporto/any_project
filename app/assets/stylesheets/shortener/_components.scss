@@ -1,0 +1,72 @@
+@import 'colors';
+
+.logo {
+  font-weight: bold;
+
+  .name {
+    color: $main-neutral-color;
+    font-size: 64px;
+  }
+
+  .tld {
+    color: $highlight-color;
+    font-size: 64px;
+  }
+}
+
+.centered-header {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.centered-link-form {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+  .input-item {
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .long-url-input {
+    border: 1px solid #00000026;
+    height: 30px;
+    width: 100%;
+  }
+
+  input[type='submit'] {
+    background: $action-color;
+    border: 0;
+    color: #fff;
+
+    &:hover {
+      background: $highlight-color;
+      animation: 1s;
+    }
+  }
+}
+
+.form-errors {
+  color: $error-main-color;
+  display: flex;
+  justify-content: center;
+}
+
+.errors-info {
+  color: $error-main-color;
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.counter-panel {
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100px;
+  padding: 20px;
+}
